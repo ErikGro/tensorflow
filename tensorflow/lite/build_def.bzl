@@ -128,6 +128,10 @@ def tflite_jni_binary(
             "-Wl,-exported_symbols_list,$(location {})".format(exported_symbols),
             "-Wl,-install_name,@rpath/" + name,
         ],
+        clean_dep("//tensorflow:ios"): [
+            "-Wl,-exported_symbols_list,$(location {})".format(exported_symbols),
+            "-Wl,-install_name,@rpath/" + name,
+        ],
         clean_dep("//tensorflow:windows"): [],
         "//conditions:default": [
             "-Wl,--version-script,$(location {})".format(linkscript),

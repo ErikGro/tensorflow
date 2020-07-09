@@ -6,6 +6,7 @@
 - numpy (pip3 install numpy)
 
 ## Building tensorflow lite for RoboVM iOS Project
+First you have to initialize the project via ```configure``` which lies in root of the repository.
 Since we need tensorflow lite with java-API we can use the same rule, which is used for building tensorflow lite for android.
 Execute follwing command from repository root directory to create library for device:
 ```bash
